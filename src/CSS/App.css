@@ -1,0 +1,251 @@
+/* === BASE === */
+#root {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+}
+
+/* === BOTÓN === */
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: #45a049;
+}
+
+/* === LOGOS === */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.logo-cens {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* === ANIMACIÓN REACT === */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* === CARD DE REACT === */
+.card {
+  padding: 2em;
+}
+.read-the-docs {
+  color: #888;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.app {
+  display: flex;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 250px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.sidebar .menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar .menu li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* === CONTENIDO PRINCIPAL === */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === HEADER === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.header .header-left {
+  display: flex;
+  align-items: center;
+}
+.header .header-left h1 {
+  margin-left: 10px;
+}
+
+.header .header-right {
+  display: flex;
+  align-items: center;
+}
+.header .header-right button {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+/* === DASHBOARD === */
+.dashboard {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-card h3 {
+  font-size: 16px;
+  color: #333;
+}
+
+.dashboard-card h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* === BOTÓN DE MODO OSCURO === */
+.toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* ========================================================
+   💡 MODO OSCURO (aplicado con body.dark-mode)
+======================================================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+}
+
+body.dark-mode .menu li a {
+  color: #eaeaea;
+}
+
+body.dark-mode .menu li a:hover {
+  color: #9ef89e;
+}
+
+body.dark-mode .content {
+  background-color: #1c1c1c;
+  color: #eaeaea;
+}
+
+body.dark-mode .header {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .dashboard-card {
+  background-color: #242424;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .dashboard-card h3,
+body.dark-mode .dashboard-card h2 {
+  color: #eaeaea;
+}
+
+body.dark-mode .button {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .button:hover {
+  background-color: #666;
+}
+
+body.dark-mode .toggle-theme {
+  color: #fff;
+}
+
+.charts-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* por si el ancho no cabe, que se acomoden abajo */
+  margin-top: 20px;
+  
+}
+

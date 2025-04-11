@@ -1,0 +1,18 @@
+.ingreso-chart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .ingreso-chart-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #3f7d02;
+    text-align: center;
+  }
+  
+  /* Soporte para modo oscuro */
+  body.dark-mode .ingreso-chart-title {
+    color: #eaeaea;
+  }
+  
