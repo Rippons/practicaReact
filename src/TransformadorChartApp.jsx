@@ -1,7 +1,8 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import './CSS/TransformadorChart.css';  // Importa el archivo CSS
+import './CSS/TransformadorChart.css';  
+
 
 // Registramos los elementos de Chart.js necesarios
 ChartJS.register(ArcElement, Tooltip, Legend);

@@ -4,8 +4,8 @@
   height: auto;
   background-color: #e3f8cee7;
   padding: 20px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 2px 0 10px rgba(143, 255, 91, 0.564);
+  font-family: "Inter var", sans-serif;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -15,6 +15,58 @@
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
+}
+
+/* Para los iconos */
+.visibilityIcons {
+  display: inline-block; /* Asegura que los iconos siempre sean visibles */
+}
+
+.visibulityTest {
+  display: inline-block;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 80px; 
+  }
+
+  .section-title,
+  .main-button span, 
+  .submenu-items li a { 
+    display: none;
+  }
+
+
+  .visibilityIcons {
+    display: inline-block; 
+  }
+  
+  .submenu-title {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+}
+
+/* ====== RESPONSIVE PARA TABLETAS O PANTALLAS MEDIAS ====== */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .sidebar {
+    width: 200px; /* Sidebar más pequeño en tabletas */
+  }
+
+  /* Ocultar texto y mostrar solo los iconos */
+  .section-title,
+  .main-button span, 
+  .submenu-items li a { 
+    display: none;
+  }
+
+  /* Mostrar iconos en lugar de los textos */
+  .visibilityIcons {
+    display: inline-block; /* Mostrar los iconos */
+  }
 }
 
 /* Cuando está cerrada en responsive */
@@ -48,7 +100,7 @@
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to right, #2dbd6e, #a6f77b);
-  color: white;
+  color: #444;
   padding: 10px 15px;
   border-radius: 20px;
   text-decoration: none;
@@ -76,6 +128,7 @@
   align-items: center;
   justify-content: space-between;
   color: #444;
+  background: linear-gradient(to right, #28a55f, #92f063);
   padding: 10px;
   font-weight: 500;
   cursor: pointer;
@@ -118,13 +171,14 @@
 /* ====== BOTÓN HAMBURGUESA ====== */
 .menu-toggle {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 2px;
+  left: 2px;
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1100;
+  display: block;
 }
 
 /* ====== RESPONSIVE ====== */
@@ -147,7 +201,7 @@
 body.dark-mode .sidebar {
   background-color: #1e1e1e;
   color: #eaeaea;
-  box-shadow: 2px 0 10px rgba(255, 255, 255, 0.05);
+  box-shadow: 2px 0 10px rgba(255, 255, 255, 0.196);
 }
 
 body.dark-mode .section-title {
@@ -177,4 +231,17 @@ body.dark-mode .submenu-items li a {
 
 body.dark-mode .submenu-items li a:hover {
   color: #9ef89e;
+}
+
+body.dark-mode .submenu-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f5f4f4;
+  background: linear-gradient(to right, #3b3b3b, #4b4b4b);
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 5px;
 }

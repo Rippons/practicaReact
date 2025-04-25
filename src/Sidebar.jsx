@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CSS/Sidebar.css';
 
+
 const Sidebar = () => {
   const [openParametros, setOpenParametros] = useState(false);
   const [openSeguridad, setOpenSeguridad] = useState(false);

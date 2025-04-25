@@ -1,9 +1,9 @@
 /* === BASE === */
 #root {
-  max-width: 2000px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 auto;
   text-align: center;
+  height: 100%;
 }
 
 /* === BOTÓN === */
@@ -66,6 +66,8 @@
 /* === CONTENEDOR PRINCIPAL === */
 .app {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 /* === SIDEBAR === */
@@ -106,6 +108,8 @@
   background-color: #ffffff;
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
+ 
+  
 }
 
 /* === HEADER === */
@@ -141,13 +145,32 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: center; 
+  align-items: center;
+  margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+  .dashboard-card {
+    width: 100px; 
+    max-width: 300px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    flex-direction: column; 
+    align-items: center; 
+  }
 }
 
 .dashboard-card {
   background-color: #fff;
   width: 250px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.301);
   border-radius: 8px;
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -176,7 +199,7 @@
   top: 20px;
   right: 20px;
   z-index: 1100;
-  background-color: transparent;
+  background: linear-gradient(to right, #2dbd6e, #a6f77b);
   border: none;
   font-size: 16px;
   cursor: pointer;
@@ -216,9 +239,9 @@ body.dark-mode .header {
 }
 
 body.dark-mode .dashboard-card {
-  background-color: #242424;
+  background-color: #333;
   color: #fff;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.26);
 }
 
 body.dark-mode .dashboard-card h3,
@@ -236,16 +259,27 @@ body.dark-mode .button:hover {
 }
 
 body.dark-mode .toggle-theme {
-  color: #fff;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  background: linear-gradient(to right, #3b3b3b, #4b4b4b);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s ease;
 }
+
 
 .charts-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  flex-wrap: wrap; /* por si el ancho no cabe, que se acomoden abajo */
+  flex-wrap: wrap; 
   margin-top: 20px;
   
 }
+
 

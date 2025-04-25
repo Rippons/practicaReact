@@ -27,7 +27,7 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.301);
     max-width: 500px;
     width: 100%;
     box-sizing: border-box;
@@ -39,7 +39,7 @@
   body.dark-mode .chart-card {
     background-color: #1e1e1e;
     color: #eaeaea;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.226);
   }
   
   

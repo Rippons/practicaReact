@@ -6,8 +6,13 @@ import Sidebar from './Sidebar'; // Barra lateral
 import Header from './Header'; // Encabezado
 import DashboardCard from './DashboardCard'; // Tarjetas
 import IngresoChartApp from './IngresoChartApp';
-
+import TransformadorForm from './TransformadorForm';
 import './CSS/App.css'; // Estilos generales
+import 'primereact/resources/themes/lara-light-indigo/theme.css'; 
+import 'primereact/resources/primereact.min.css';  // Estilos de PrimeReact
+import 'primeicons/primeicons.css';
+
+
 
 const Home = () => <h2>Inicio</h2>;
 
@@ -65,6 +70,7 @@ function App() {
           <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/about" element={<About />} />
+  <Route path="/epm" element={<TransformadorForm />} /> 
   <Route
   path="/grafico"
   element={
